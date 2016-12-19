@@ -30,7 +30,7 @@ public class DepartmentDao {
         return departments.values();
     }
 
-    public Department getDepartents(Integer id){
+    public Department getDepartent(Integer id){
         return departments.get(id);
     }
 
