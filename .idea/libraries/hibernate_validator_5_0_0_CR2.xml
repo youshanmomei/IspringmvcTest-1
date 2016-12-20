@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="hibernate-validator-5.0.0.CR2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-validator-5.0.0.CR2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-validator-annotation-processor-5.0.0.CR2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-logging-3.1.1.GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aop-4.0.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
