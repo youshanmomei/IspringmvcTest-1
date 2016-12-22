@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IspringmvcTest-1.iml" filepath="$PROJECT_DIR$/IspringmvcTest-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IspringmvcTest01/IspringmvcTest01.iml" filepath="$PROJECT_DIR$/IspringmvcTest01/IspringmvcTest01.iml" />
     </modules>
   </component>
 </project>
