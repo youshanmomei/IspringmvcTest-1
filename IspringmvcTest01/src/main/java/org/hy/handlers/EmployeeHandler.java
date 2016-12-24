@@ -18,6 +18,7 @@ public class EmployeeHandler {
 
     @RequestMapping("/emps")
     public String list(Map<String, Object> map){
+        //put employee information into requestScope
         map.put("employees", employeeDao.getAll());
         return "list";
     }
