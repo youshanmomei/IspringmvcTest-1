@@ -12,5 +12,9 @@
 </head>
 <body>
     <h1>let's start springmvc journal</h1>
+    <br>
+    <hr>
+    <a href="/emps">Show All Employees</a>
+
 </body>
 </html>
