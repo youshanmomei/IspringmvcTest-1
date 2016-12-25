@@ -45,6 +45,9 @@
         </table>
     </c:if>
 
+    <br><br>
+    <a href="/emp">Add employee</a>
+
 
 
 

@@ -9,8 +9,8 @@
         <module name="IspringmvcTest01" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="IspringmvcTest01" target="1.7" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="IspringmvcTest01" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
