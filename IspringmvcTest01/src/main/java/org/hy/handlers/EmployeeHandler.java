@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,6 +24,13 @@ public class EmployeeHandler {
     private EmployeeDao employeeDao;
     @Autowired
     private DepartmentDao departmentDao;
+
+
+    @RequestMapping(value = "/emp/{id}", method = RequestMethod.DELETE)
+    public String delete(@PathVariable("id") Integer id) {
+        employeeDao.delete(id);
+        return "redirect:/emps";
+    }
 
     /**
      * @Valid是使用hibernate validation的时候使用

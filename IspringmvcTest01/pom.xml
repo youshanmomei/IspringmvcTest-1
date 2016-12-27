@@ -144,6 +144,28 @@
             </plugin>
 
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/webapp/WEB-INF/scripts</directory>
+                <includes>
+                    <include>**/*.js</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+
+
+        </resources>
+
+
     </build>
 
 
