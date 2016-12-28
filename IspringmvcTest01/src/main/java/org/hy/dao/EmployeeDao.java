@@ -39,7 +39,7 @@ public class EmployeeDao {
         }
 
         employee.setDepartment(departmentDao.getDepartent(employee.getDepartment().getId()));
-        employees.put(employee.getGender(), employee);
+        employees.put(employee.getId(), employee);
     }
 
     public Collection<Employee> getAll(){

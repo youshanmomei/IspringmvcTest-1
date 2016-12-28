@@ -8,11 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Created by andy on 2016/12/24.
@@ -25,6 +24,25 @@ public class EmployeeHandler {
     @Autowired
     private DepartmentDao departmentDao;
 
+    @ModelAttribute
+    public void getEmployee(@RequestParam(value = "id", required = false) Integer id, Map<String, Object> map){
+        if (id!=null)
+            map.put("employee", employeeDao.get(id));
+    }
+
+    @RequestMapping(value="/emp", method = RequestMethod.PUT)
+    public String update(Employee employee){
+        employeeDao.save(employee);
+        return "redirect:/emps";
+    }
+
+
+    @RequestMapping(value = "/emp/{id}", method = RequestMethod.GET)
+    public String input(@PathVariable("id") Integer id, Map<String, Object> map) {
+        map.put("employee", employeeDao.get(id));
+        map.put("departments", departmentDao.getDepartents());
+        return "input";
+    }
 
     @RequestMapping(value = "/emp/{id}", method = RequestMethod.DELETE)
     public String delete(@PathVariable("id") Integer id) {
