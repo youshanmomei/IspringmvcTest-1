@@ -10,6 +10,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Map;
 import java.util.Objects;
 
@@ -59,17 +60,17 @@ public class EmployeeHandler {
      * @return
      */
     @RequestMapping(value = "/emp", method = RequestMethod.POST)
-    public String save(Employee employee, BindingResult result, Map<String, Object> map){
-//        if(result.getErrorCount()>0){
-//            System.out.println("something error ...");
-//            for (FieldError error : result.getFieldErrors()) {
-//                System.out.println(error.getField() + "|<==============>|" + error.getDefaultMessage());
-//            }
-//
-//            map.put("departments", departmentDao.getDepartents());
-//            map.put("employee", employee);
-//            return "input";
-//        }
+    public String save(@Valid Employee employee, BindingResult result, Map<String, Object> map){
+        if(result.getErrorCount()>0){
+            System.out.println("something error ...");
+            for (FieldError error : result.getFieldErrors()) {
+                System.out.println(error.getField() + "|<==============>|" + error.getDefaultMessage());
+            }
+
+            map.put("departments", departmentDao.getDepartents());
+            map.put("employee", employee);
+            return "input";
+        }
 
 
         employeeDao.save(employee);

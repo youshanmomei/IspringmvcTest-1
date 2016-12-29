@@ -5,7 +5,6 @@
   Time: 20:36
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="org.springframework.web.bind.annotation.ModelAttribute"%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -15,9 +14,10 @@
     <title>Add Employee</title>
 </head>
 <body>
-    <form:form action="${pageContext.request.contextPath}/emp" method="POST" modelAttribute="employee">
+    <form:form action="${pageContext.request.contextPath}/emp" method="POST" modelAttribute="employee" acceptCharset="utf-8">
         <c:if test="${employee.id==null}">
             LastName:<form:input path="lastname"/> &nbsp;
+            <form:errors path="lastname"/><br>
         </c:if>
         <c:if test="${employee.id!=null}">
             <form:hidden path="id"/>
@@ -25,7 +25,7 @@
         </c:if>
         <br>
         Email :<form:input path="email"/>&nbsp;
-
+        <form:errors path="email"/>
         <br>
        <%
             Map<String, String> genders = new HashMap();

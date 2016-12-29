@@ -30,9 +30,21 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--该Filter要放在所有的filter前面，否则不会生效-->
+    <filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <!-- 配置：把POST请求转为DELETE、PUT请求 -->
-    <!-- i don't know why, when i add this filter, the tomcat can't be use  -->
     <filter>
         <filter-name>HiddenHttpMethodFilter</filter-name>
         <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
@@ -41,6 +53,8 @@
         <filter-name>HiddenHttpMethodFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+
 
 
 </web-app>
