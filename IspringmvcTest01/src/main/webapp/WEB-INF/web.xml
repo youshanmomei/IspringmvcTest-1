@@ -30,6 +30,7 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--解决中文乱码-->
     <!--该Filter要放在所有的filter前面，否则不会生效-->
     <filter>
         <filter-name>Set Character Encoding</filter-name>

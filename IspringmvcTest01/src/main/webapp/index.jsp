@@ -15,6 +15,9 @@
     <br>
     <hr>
     <a href="/emps">Show All Employees</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <a href="/i18n">I18N PAGE</a>
+
 
 </body>
 </html>
