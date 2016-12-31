@@ -25,6 +25,7 @@
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
     </mvc:interceptors>
 
+    <!-- 实现一个上传下载的功能 -->
     <!-- 配置MutipartResolver -->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
