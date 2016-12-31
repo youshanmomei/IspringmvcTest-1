@@ -111,14 +111,18 @@
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-            <version>1.0.0.GA</version>
-            <!--写代码的时候依赖，真正打包的时候不需要，因为改包里面的某个东西与上面的commons里面的某个包有冲突-->
-            <scope>provided</scope>
+            <version>1.1.0.Final</version>
+            <!-- 写代码的时候依赖，真正打包的时候不需要，因为包版本有冲突-->
+            <!-- 由于hibernate-validator-5.x.x已经不兼容validation-api-1.0.x，
+                 这是因为在hibernate- validator-5.x.xhibernate-validator-5.x.x已经把旧的校验框架JSR-303，
+                 改变为JSR-349了。-->
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>5.3.4.Final</version>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -126,16 +130,10 @@
             <version>1.3.1</version>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.8.4</version>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.4</version>
         </dependency>
-
 
     </dependencies>
 
