@@ -49,6 +49,9 @@
 
     </c:if>
 
+    <br><hr>
+    <a href="/emp">Add Employee</a>
+
 
 </body>
 </html>

@@ -22,11 +22,11 @@ public class EmployeeDao {
     static{
         employees = new HashMap<Integer, Employee>();
 
-        employees.put(2001, new Employee(2001, "E-AA", "aaa@qq.com", 1, new Department(201, "D-AA")));
-        employees.put(2002, new Employee(2002, "E-BB", "bbb@qq.com", 0, new Department(202, "D-BB")));
-        employees.put(2003, new Employee(2003, "E-CC", "ccc@qq.com", 1, new Department(203, "D-CC")));
-        employees.put(2004, new Employee(2004, "E-DD", "ddd@qq.com", 0, new Department(204, "D-DD")));
-        employees.put(2005, new Employee(2005, "E-EE", "eee@qq.com", 1, new Department(205, "D-EE")));
+        employees.put(2001, new Employee(2001, "AA", "aaa@qq.com", 1, new Department(201, "D-AA")));
+        employees.put(2002, new Employee(2002, "BB", "bbb@qq.com", 0, new Department(202, "D-BB")));
+        employees.put(2003, new Employee(2003, "CC", "ccc@qq.com", 1, new Department(203, "D-CC")));
+        employees.put(2004, new Employee(2004, "DD", "ddd@qq.com", 0, new Department(204, "D-DD")));
+        employees.put(2005, new Employee(2005, "EE", "eee@qq.com", 1, new Department(205, "D-EE")));
     }
 
     private static Integer initId = 2006;
