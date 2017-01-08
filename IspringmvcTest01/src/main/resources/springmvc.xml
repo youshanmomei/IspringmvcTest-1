@@ -20,10 +20,20 @@
     <!--静态资源映射-->
     <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/" />
 
+
+
     <!-- 配置localchangeIntercepter -->
+    <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
     <mvc:interceptors>
-        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
     </mvc:interceptors>
+
+    <!--不通过handler，直接进行页面跳转的方法-->
+    <mvc:view-controller path="/i18n" view-name="i18n"/>
+    <mvc:view-controller path="/i18n2" view-name="i18n2"/>
+
+
+
 
     <!-- 实现一个上传下载的功能 -->
     <!-- 配置MutipartResolver -->
@@ -42,16 +52,5 @@
         <!--解决乱码问题-->
         <property name="defaultEncoding" value="UTF-8"/>
     </bean>
-
-
-    <!-- 配置localchangeIntercepter -->
-    <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
-    <mvc:interceptors>
-        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
-    </mvc:interceptors>
-
-    <!--不通过handler，直接进行页面跳转的方法-->
-    <mvc:view-controller path="/i18n" view-name="i18n"/>
-    <mvc:view-controller path="/i18n2" view-name="i18n2"/>
 
 </beans>
