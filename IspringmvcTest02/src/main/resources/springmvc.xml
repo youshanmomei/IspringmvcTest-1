@@ -41,5 +41,12 @@
     <mvc:view-controller path="/i18n" view-name="i18n"/>
     <mvc:view-controller path="/i18n2" view-name="i18n2"/>
 
+    <!-- 实现一个上传下载的功能 -->
+    <!-- 配置MutipartResolver -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSize" value="1024000"></property>
+    </bean>
+
 
 </beans>

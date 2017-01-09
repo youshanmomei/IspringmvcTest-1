@@ -6,7 +6,15 @@ import org.hy.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.sound.midi.Soundbank;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -21,6 +29,29 @@ public class EmployeeHandler {
     private DepartmentDao departmentDao;
 
 
+    @RequestMapping(value = "/testFileUpload", method = RequestMethod.POST)
+    public String testFileUpload(@RequestParam("desc") String desc, @RequestParam("file")MultipartFile file, HttpServletRequest request) throws IOException {
+        System.out.println("|--->>> desc: " + desc);
+        System.out.println("|--->>> OriginalFileName: " + file.getOriginalFilename());
+
+        InputStream in = file.getInputStream();
+        String path = request.getSession().getServletContext().getRealPath("/WEB-INF/files/" + new Date().getTime() + "_" + file.getOriginalFilename());
+        System.out.println("|--->>> file path: " + path);
+        File ufile = new File(path);
+        FileOutputStream out = new FileOutputStream(ufile);
+
+        byte[] bytes = new byte[1024 * 8];
+        int len = -1;
+        while ((len = in.read(bytes)) != -1) {
+            out.write(bytes, 0, len);
+        }
+
+        out.flush();
+        out.close();;
+        in.close();
+
+        return "success";
+    }
 
 
     @ModelAttribute
