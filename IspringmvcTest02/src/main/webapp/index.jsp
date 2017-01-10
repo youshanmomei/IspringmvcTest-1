@@ -21,6 +21,11 @@
         Desc:   <input type="text" name="desc"> <br>
         <input type="submit" value="submit">
     </form>
+    <br>
+    <hr>
+    <a href="/testFileDownload">Download</a>
+    &nbsp; | &nbsp;
+    <a href="/testJson">Json</a>
 
 </body>
 </html>
