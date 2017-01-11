@@ -41,6 +41,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest01" />
     <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest02" />
+    <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest03" />
     <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
@@ -48,6 +49,7 @@
       <list>
         <option value="$PROJECT_DIR$/IspringmvcTest01/pom.xml" />
         <option value="$PROJECT_DIR$/IspringmvcTest02/pom.xml" />
+        <option value="$PROJECT_DIR$/IspringmvcTest03/pom.xml" />
       </list>
     </option>
   </component>
