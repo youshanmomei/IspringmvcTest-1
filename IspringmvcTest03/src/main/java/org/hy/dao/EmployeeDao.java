@@ -47,5 +47,7 @@ public class EmployeeDao {
         return employees.get(id);
     }
 
+    public Employee delete(Integer id){ return employees.remove(id); }
+
 
 }

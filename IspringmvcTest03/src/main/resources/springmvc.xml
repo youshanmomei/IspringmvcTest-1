@@ -18,4 +18,7 @@
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
 
+    <!--static resource mapping-->
+        <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/"/>
+
 </beans>
