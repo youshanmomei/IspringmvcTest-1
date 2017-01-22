@@ -15,6 +15,8 @@
     <h1>Ispringtest-03</h1>
     <hr>
     <a href="/emps">show lists</a>
+    <hr>
+    <a href="/i18n">国际化</a>
 
 </body>
 </html>
