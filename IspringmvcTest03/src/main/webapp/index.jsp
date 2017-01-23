@@ -17,6 +17,15 @@
     <a href="/emps">show lists</a>
     <hr>
     <a href="/i18n">国际化</a>
+    <hr>
+    <h1>upload and download</h1>
+    <%--enctype属性规定在发送到服务期之前应该如何对表单数据进行编码--%>
+    <%--multipart/form-data不对字符编码。在试用文件上传控件的表单时，必须使用该值--%>
+    <form action="/testFileUpload" method="post" enctype="multipart/form-data">
+        File: <input type="file" name="file"/> <br>
+        Desc: <input type="text" name="desc"/> <br>
+        <input type="submit" value="submit">
+    </form>
 
 </body>
 </html>
