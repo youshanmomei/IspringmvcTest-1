@@ -41,7 +41,7 @@ public class EmployeeHandler {
     }
 
     @RequestMapping(value = "/testFileDownload")
-    public ResponseEntity<byte[]> testFileDownload(HttpSession session) throws IOException {
+    public ResponseEntity<byte[]> testFileDownload(HttpSession session) throws Exception {
         byte[] body = null;
         ServletContext servletContext = session.getServletContext();
         InputStream in = servletContext.getResourceAsStream("/WEB-INF/files/a.txt");
@@ -50,7 +50,7 @@ public class EmployeeHandler {
 
         //add head
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "attachmentL;filename=a.txt");
+        headers.add("Content-Disposition", "attachment;filename=a.txt");
 
         //add body
         HttpStatus statusCode = HttpStatus.OK;
