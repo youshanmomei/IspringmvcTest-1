@@ -18,6 +18,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 
@@ -33,6 +34,13 @@ public class EmployeeHandler {
     @Autowired
     private DepartmentDao departmentDao;
 
+    @RequestMapping("/testJson")
+    @ResponseBody
+    public Collection<Employee> testJson() {
+        Collection<Employee> employees = employeeDao.getAll();
+        return employees;
+    }
+
     @RequestMapping("/testFileDownload")
     public ResponseEntity<byte[]> testDownload(HttpSession session) throws IOException {
         byte[] body = null;
@@ -43,7 +51,7 @@ public class EmployeeHandler {
 
         //add head
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "attachment;filename=a.txt");
+        headers.add("Content-Disposition", " attachment;filename=a.txt");
 
         //add body
         HttpStatus statusCode = HttpStatus.OK;

@@ -48,11 +48,11 @@ public class EmployeeHandler {
         body = new byte[in.available()];
         in.read(body);
 
-        //add head
+        //add html head
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "attachment;filename=a.txt");
 
-        //add body
+        //add html body
         HttpStatus statusCode = HttpStatus.OK;
         ResponseEntity<byte[]> response = new ResponseEntity<>(body, headers, statusCode);
 

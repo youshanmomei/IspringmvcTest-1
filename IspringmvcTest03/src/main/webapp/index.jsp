@@ -28,6 +28,8 @@
     </form>
     <br>
     <a href="/testFileDownload">Download</a>
+    <hr>
+    <a href="/testJson">Json</a>
 
 </body>
 </html>
