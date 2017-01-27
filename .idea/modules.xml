@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/IspringmvcTest01/IspringmvcTest01.iml" filepath="$PROJECT_DIR$/IspringmvcTest01/IspringmvcTest01.iml" />
       <module fileurl="file://$PROJECT_DIR$/IspringmvcTest02/IspringmvcTest02.iml" filepath="$PROJECT_DIR$/IspringmvcTest02/IspringmvcTest02.iml" />
       <module fileurl="file://$PROJECT_DIR$/IspringmvcTest03/IspringmvcTest03.iml" filepath="$PROJECT_DIR$/IspringmvcTest03/IspringmvcTest03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IspringmvcTest04/IspringmvcTest04.iml" filepath="$PROJECT_DIR$/IspringmvcTest04/IspringmvcTest04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IspringmvcTest05/IspringmvcTest05.iml" filepath="$PROJECT_DIR$/IspringmvcTest05/IspringmvcTest05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IspringmvcTest06/IspringmvcTest06.iml" filepath="$PROJECT_DIR$/IspringmvcTest06/IspringmvcTest06.iml" />
     </modules>
   </component>
 </project>

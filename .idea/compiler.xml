@@ -9,12 +9,18 @@
         <module name="IspringmvcTest01" />
         <module name="IspringmvcTest02" />
         <module name="IspringmvcTest03" />
+        <module name="IspringmvcTest04" />
+        <module name="IspringmvcTest05" />
+        <module name="IspringmvcTest06" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="IspringmvcTest01" target="1.7" />
       <module name="IspringmvcTest02" target="1.7" />
       <module name="IspringmvcTest03" target="1.7" />
+      <module name="IspringmvcTest04" target="1.7" />
+      <module name="IspringmvcTest05" target="1.7" />
+      <module name="IspringmvcTest06" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
