@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="IspringmvcTest05:war exploded">
-    <output-path>$PROJECT_DIR$/IspringmvcTest05/target/IspringmvcTest02</output-path>
+    <output-path>$PROJECT_DIR$/IspringmvcTest05/target/IspringmvcTest05</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -38,7 +38,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/IspringmvcTest05/target/IspringmvcTest02/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/IspringmvcTest05/target/IspringmvcTest05/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="IspringmvcTest05/web/Web" />
     </root>

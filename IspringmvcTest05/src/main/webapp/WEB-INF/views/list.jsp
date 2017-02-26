@@ -42,5 +42,8 @@
             </c:forEach>
         </table>
     </c:if>
+
+    <br>
+    <h4><a href="emp">add employee</a> </h4>
 </body>
 </html>

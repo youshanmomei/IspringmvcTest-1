@@ -28,19 +28,19 @@
         </c:if>
 
         <br>
-        Email: <form:input path="email"/><br>
+        Email:<form:input path="email"/>
+        <br>
 
         <%
-            Map<String, String> genders = new HashMap<String, String>();
-            genders.put("1", "male");
-            genders.put("0", "female");
+            Map<String, String> genders = new HashMap<String,String>();
+            genders.put("0", "Female");
+            genders.put("1", "Male");
             request.setAttribute("genders", genders);
         %>
-        Gender: <form:radiobuttons path="gender" items="${genders}"/><br>
-        Department: <form:select path="department.id" items="${departments}" itemLabel="name" itemValue="id"/><br>
+        Gender:<form:radiobuttons path="gender" items="${genders}"/><br>
+        Department:<form:select path="department.id" items="${departments}" itemLabel="name" itemValue="id"/><br>
 
         <input type="submit" value="submit" />
     </form:form>
-
 </body>
 </html>

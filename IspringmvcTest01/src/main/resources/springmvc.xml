@@ -16,7 +16,7 @@
 
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
-
+z
     <!--静态资源映射-->
     <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/" />
 

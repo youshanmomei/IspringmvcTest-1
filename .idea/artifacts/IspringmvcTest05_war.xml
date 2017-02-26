@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="IspringmvcTest05:war">
     <output-path>$PROJECT_DIR$/IspringmvcTest05/target</output-path>
-    <root id="archive" name="IspringmvcTest02.war">
+    <root id="archive" name="IspringmvcTest05.war">
       <element id="artifact" artifact-name="IspringmvcTest05:war exploded" />
     </root>
   </artifact>

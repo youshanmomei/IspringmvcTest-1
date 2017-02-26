@@ -2,9 +2,11 @@ package org.hy.handlers;
 
 import org.hy.dao.DepartmentDao;
 import org.hy.dao.EmployeeDao;
+import org.hy.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Map;
 
@@ -19,6 +21,27 @@ public class EmployeeHandler {
 
     @Autowired
     private DepartmentDao departmentDao;
+
+    @RequestMapping(value = "/emp", method = RequestMethod.POST)
+    public String save(Employee employee, Map<String, Object> map){
+        System.out.println("run save method ... ");
+        if(employee!=null){
+            //select tag just get id, so need use method to set department info.
+            Integer depId = employee.getDepartment().getId();
+            employee.setDepartment(departmentDao.getDepartmentById(depId));
+            System.out.println("|0004|===>>> employee: " + employee);
+
+            employeeDao.save(employee);
+        }
+        return "redirect:/emps";
+    }
+
+    @RequestMapping(value = "/emp", method = RequestMethod.GET)
+    public String input(Map<String, Object> map){
+        map.put("departments", departmentDao.getDepartments());
+        map.put("employee", new Employee());
+        return "input";
+    }
 
     @RequestMapping("/emps")
     public String list(Map<String, Object> map){

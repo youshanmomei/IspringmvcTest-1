@@ -187,7 +187,7 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
-        <finalName>IspringmvcTest02</finalName>
+        <finalName>IspringmvcTest06</finalName>
     </build>
 
 
