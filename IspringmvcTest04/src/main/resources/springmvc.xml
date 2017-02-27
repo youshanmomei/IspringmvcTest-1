@@ -17,4 +17,8 @@
     <!-- da-default、annotation-->
     <mvc:default-servlet-handler/><!--用于访问静态文件-->
     <mvc:annotation-driven/><!--解决了@Controller注解的使用前配置-->
+
+    <!--static resource mapping-->
+    <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/"/>
+
 </beans>

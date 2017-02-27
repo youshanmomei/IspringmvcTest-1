@@ -5,6 +5,7 @@ import org.hy.dao.EmployeeDao;
 import org.hy.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,6 +22,12 @@ public class EmployeeHandler {
 
     @Autowired
     private DepartmentDao departmentDao;
+
+    @RequestMapping(value = "/emp/{id}", method = RequestMethod.DELETE)
+    public String delete(@PathVariable("id") Integer id) {
+        employeeDao.delete(id);
+        return "redirect:/emps";
+    }
 
     @RequestMapping(value = "/emp", method = RequestMethod.POST)
     public String save(Employee employee, Map<String, Object> map){

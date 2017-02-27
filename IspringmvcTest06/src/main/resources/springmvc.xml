@@ -18,4 +18,7 @@
     <mvc:default-servlet-handler/><!--use to visit static page-->
     <mvc:annotation-driven/><!--do some configure before using @Controller-->
 
+    <!--static resource mapping-->
+    <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts"/>
+
 </beans>

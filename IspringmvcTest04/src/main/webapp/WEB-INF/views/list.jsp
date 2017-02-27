@@ -11,9 +11,26 @@
 <html>
 <head>
     <title>show employees</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".delete").click(function () {
+                var href = $(this).attr("href");
+                $("form").attr("action", href).submit();
+//                alert("hello world");
+                return false;
+            });
+        });
+    </script>
 </head>
 <body>
     <h3>show employee info</h3>
+
+    <form action="" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+    </form>
+
     <c:if test="${empty employees}">
         e... no employee
     </c:if>
@@ -39,7 +56,7 @@
                     <td>${emp.gender==0?"Female":"Male"}</td>
                     <td>${emp.department.name}</td>
                     <td><a href="#">Edit</a> </td>
-                    <td><a href="#">Delete</a> </td>
+                    <td><a href="/emp/${emp.id}" class="delete">Delete</a> </td>
                 </tr>
             </c:forEach>
         </table>
