@@ -52,7 +52,7 @@
                     <td>${emp.email}</td>
                     <td>${emp.gender==0?"Female":"Male"}</td>
                     <td>${emp.department.name}</td>
-                    <td><a href="#">Edit</a> </td>
+                    <td><a href="/emp/${emp.id}">Edit</a> </td>
                     <td><a href="/emp/${emp.id}" class="delete">Delete</a> </td>
                 </tr>
             </c:forEach>

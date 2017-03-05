@@ -101,8 +101,6 @@ public class EmployeeHandler {
         return "redirect:/emps";
     }
 
-
-
     @RequestMapping(value = "/emp/{id}", method = RequestMethod.GET)
     public String input(@PathVariable("id") Integer id, Map<String, Object> map) {
         map.put("employee", employeeDao.get(id));
