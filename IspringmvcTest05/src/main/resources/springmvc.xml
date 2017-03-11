@@ -21,4 +21,25 @@
     <!--static resource mapping-->
     <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/"/>
 
+    <!--配置resolve转换器，转换locale值-->
+    <bean class="org.springframework.web.servlet.i18n.SessionLocaleResolver" id="localeResolver"/>
+
+    <!--配置国际化资源文件-->
+    <bean class="org.springframework.context.support.ResourceBundleMessageSource" name="messageSource">
+        <property name="basename" value="i18n"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!--配置-->
+    <!--国际化请求拦截器，如果请求是基于（cookie/session）的必须配置-->
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
+    </mvc:interceptors>
+
+    <!--不通过handler，直接进行页面跳转的方法-->
+    <mvc:view-controller path="/i18n" view-name="i18n"/>
+    <mvc:view-controller path="/i18n2" view-name="i18n2"/>
+
+
+
 </beans>

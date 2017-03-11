@@ -14,5 +14,7 @@
     <h3>Employee Info</h3>
     <h4><a href="testSuccess">Test</a> </h4>
     <h4><a href="emps">Show Employees Info</a> </h4>
+    <br>
+    <a href="/i18n">Internationalization</a>
 </body>
 </html>
