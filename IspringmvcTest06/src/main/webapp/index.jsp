@@ -16,5 +16,21 @@
     <h4><a href="emps">Show Employees Info</a> </h4>
     <br>
     <a href="/i18n">Internationalization</a>
+
+    <br><br>
+    <form method="post" action="/testFileUpload" enctype="multipart/form-data">
+        File:<input type="file" name="file"/> <br>
+        Desc:<input type="text" name="desc"/> <br>
+
+        <input type="submit" name="submit"/>
+    </form>
+
+
+    <br><br>
+    <a href="/testFileDownload">testDownload</a>
+
+
+    <br><br>
+    <a href="/testJson">testJson</a>
 </body>
 </html>
