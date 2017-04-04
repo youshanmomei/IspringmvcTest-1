@@ -45,6 +45,8 @@
     <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest04" />
     <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest05" />
     <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest06" />
+    <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest07" />
+    <file type="web" url="file://$PROJECT_DIR$/IspringmvcTest08" />
     <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
@@ -56,6 +58,8 @@
         <option value="$PROJECT_DIR$/IspringmvcTest04/pom.xml" />
         <option value="$PROJECT_DIR$/IspringmvcTest05/pom.xml" />
         <option value="$PROJECT_DIR$/IspringmvcTest06/pom.xml" />
+        <option value="$PROJECT_DIR$/IspringmvcTest07/pom.xml" />
+        <option value="$PROJECT_DIR$/IspringmvcTest08/pom.xml" />
       </list>
     </option>
   </component>

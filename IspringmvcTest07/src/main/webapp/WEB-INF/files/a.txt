@@ -1,0 +1,37 @@
+log的采集流程
+
+1、打开web和mysql，让前台的界面显示出来		-ok
+	service httpd start
+	service mysqld start
+	
+	尝试访问ecshop主页：
+	http://192.168.80.120/ecshop/index.php
+	尝试访问采集脚本服务器：
+	http://192.168.80.120:8080/1.gif
+
+
+2、打开采集流程，调试crontab 		-ok
+	nginx -p `pwd` -c conf/nginx_cj_n.conf 
+		|- hadoop 用户进入到work目录下启动， /home/hadoop/work/nginx
+		|- 关闭kill -QUIT `cat /home/hadoop/work/logs/nginx.pid`
+		
+	/sbin/service crond start
+		|--查看crontab是否创建了：crontab -l // L的小写
+
+
+3、打开HDFS		-ok
+	runRemoteCmd.sh "/home/hadoop/app/zookeeper/bin/zkServer.sh start" zookeeper
+	/home/hadoop/app/hadoop/sbin/start-dfs.sh
+	
+	尝试访问：
+	http://hy1:50070
+	如果有event目录的话，就是删除，重建
+	hadoop fs -rm -r /flume/events/
+	hadoop fs -mkdir /flume/events/
+
+
+3、打开flume（注意，打开前要先去hdfs上将flume目录下的文件清空） 
+	bin/flume-ng agent -c conf -n a1 -f conf/example_n1.properties -Dflume.root.logger=INFO,console
+	
+	
+4、观察日志情况

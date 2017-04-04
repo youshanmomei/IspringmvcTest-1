@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--配置自动扫描的包-->
+    <context:component-scan base-package="org.hy"/>
+
+    <!--配置三视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <mvc:default-servlet-handler/>
+    <mvc:annotation-driven/>
+
+    <!--static resource mapping-->
+    <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts"/>
+
+    <!--to configure resolve convert-->
+    <bean class="org.springframework.web.servlet.i18n.SessionLocaleResolver" id="localeResolver"/>
+
+    <!--to configure international resource file-->
+    <bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource">
+        <property name="basename" value="i18n"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!--to configure international request interceptor, the request which is based on session or cookie must be configured-->
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
+    </mvc:interceptors>
+
+    <!--page jumping directly do not through handler-->
+    <mvc:view-controller path="/i18n" view-name="i18n"/>
+    <mvc:view-controller path="/i18n2" view-name="/i18n2"/>
+
+    <!--imply upload and download function-->
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="1024000"/>
+    </bean>
+
+</beans>
