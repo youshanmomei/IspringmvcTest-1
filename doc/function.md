@@ -367,7 +367,7 @@ springmvc.xml
 ```
 code: 
     <!--static resource mapping-->
-    <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts"/>
+    <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/"/>
 ```
 
 using js in list.jsp
