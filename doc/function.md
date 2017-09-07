@@ -271,7 +271,8 @@ code:
     /**
      * the method is help for the method of update.
      * and be created when create input page.
-     * @param id
+     * @ModelAttribute 注释的方法会在此controller每个方法执行前被执行， 所以可以用于值的覆盖。比如本Controller的update()方法
+     * @param id
      * @param map
      */
     @ModelAttribute
