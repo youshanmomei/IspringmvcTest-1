@@ -48,6 +48,8 @@ public class EmployeeHandler {
         HttpStatus ok = HttpStatus.OK;
         ResponseEntity<byte[]> responseEntity = new ResponseEntity<>(bytes, headers, ok);
 
+        //close stream
+        is.close();
         return responseEntity;
     }
 
