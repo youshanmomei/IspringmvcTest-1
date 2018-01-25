@@ -42,7 +42,7 @@ public class EmployeeHandler {
 
         //add head
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "attachment;filename=a.txt");
+        headers.add("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileInfo.getName(),"UTF-8"));//遇到中文名，需要encode
 
         //add body
         HttpStatus ok = HttpStatus.OK;
